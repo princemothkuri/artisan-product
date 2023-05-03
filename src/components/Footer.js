@@ -81,7 +81,7 @@ function Footer() {
         </div>
         <div className="flex flex-col justify-center">
           <input
-            className=" bg-white border-[1px] border-gray-950 px-4 py-2 text-xl"
+            className=" bg-white border-[1px] border-gray-950 px-4 py-2 text-sm"
             type="email"
             placeholder="e-mail"
           />
