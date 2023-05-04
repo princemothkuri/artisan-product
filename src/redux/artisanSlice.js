@@ -21,7 +21,7 @@ export const artisanSlice = createSlice({
     },
     deleteItem: (state, action) => {
       state.productData = state.productData.filter(
-        (item) => item.id !== action.payLoad
+        (item) => item.id !== action.payload
       );
     },
     resetCart: (state) => {
