@@ -45,6 +45,12 @@ export const artisanSlice = createSlice({
         item.quantity--;
       }
     },
+    addUser: (state, action) => {
+      state.userInfo = action.payload;
+    },
+    removeUser: (state) => {
+      state.userInfo = null;
+    },
   },
 });
 
@@ -54,5 +60,7 @@ export const {
   resetCart,
   increamentQuantity,
   decreamentQuantity,
+  addUser,
+  removeUser,
 } = artisanSlice.actions;
 export default artisanSlice.reducer;

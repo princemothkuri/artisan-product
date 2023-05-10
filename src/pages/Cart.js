@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import background from "./bgImage.JPG";
 import CartItem from "../components/CartItem";
@@ -7,6 +7,13 @@ const Cart = () => {
   const productData = useSelector((state) => state.artisan.productData);
   const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    let price = 0;
+    productData.map((item) => {
+      price += item.price;
+    });
+    setTotal(price.toFixed(2));
+  }, [productData]);
   return (
     <div>
       <div>
@@ -24,13 +31,7 @@ const Cart = () => {
             <p className="flex items-center gap-4 text-base">
               Subtotal{" "}
               <span className="font-titleFont font-bold text-lg">
-                ${" "}
-                {productData.map((item) => {
-                  // setTotal(total + item.price);
-                  console.log(item.price);
-                  // setTotal(item.price);
-                })}
-                {total}
+                $ {total}
               </span>
             </p>
             <p className="flex items-start gap-4 text-base">
@@ -42,7 +43,7 @@ const Cart = () => {
             </p>
           </div>
           <p className="font-titleFont font-semibold flex justify-between mt-6">
-            Total <span className="text-xl font-bold">$200</span>
+            Total <span className="text-xl font-bold">$ {total}</span>
           </p>
           <button className="bg-black text-white py-3 mt-6 hover:bg-gray-800 duration-300 w-full  active:bg-black text-lg">
             proceed to checkout ({productData.length} items)

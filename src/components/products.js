@@ -83,7 +83,7 @@ const Products = () => {
         </p>
       </div>
       <ToastContainer
-        position="top-right"
+        position="top-left"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}

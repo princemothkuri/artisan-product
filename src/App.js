@@ -4,11 +4,14 @@ import Cart from "./pages/Cart";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Products from "./components/products";
+import Login from "./pages/Login";
+import Profile from "./components/Profile";
 import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
   ScrollRestoration,
+  useNavigate,
 } from "react-router-dom";
 import { productsData } from "./api/Api";
 
@@ -40,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: "/Cart",
         element: <Cart />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
     ],
   },
