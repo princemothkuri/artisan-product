@@ -23,7 +23,7 @@ function Home() {
     } else {
       navigate("/login");
     }
-  }, [data]);
+  }, [userInfo]);
 
   return (
     <div>
