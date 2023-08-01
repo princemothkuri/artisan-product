@@ -18,9 +18,9 @@ function Home() {
   const [products, setProducts] = useState([]);
   const data = useLoaderData();
   useEffect(() => {
-    if (userInfo) {
-      setProducts(data.data);
-    }
+    // if (userInfo) {
+    setProducts(data.data);
+    // }
     // else {
     //   navigate("/login");
     // }

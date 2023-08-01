@@ -62,7 +62,7 @@ function Header() {
           </Link>
         </div>
 
-        <div className=" ml-20 flex items-center gap-8">
+        <div className=" ml-96 flex items-center gap-8">
           <div>
             <ul className="flex items-center gap-8">
               <Link to="/">
