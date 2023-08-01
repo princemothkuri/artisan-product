@@ -15,6 +15,7 @@ const Profile = () => {
             alt="User-Image"
             className=" w-36 h-36 rounded-full "
           />
+
           <BsCameraFill className=" absolute w-8 h-8 left-24 top-28 flex items-center justify-center cursor-pointer" />
         </div>
         <label className="text-xl bg-transparent flex items-center justify-center gap-2">

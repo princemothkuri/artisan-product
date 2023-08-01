@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Products from "./components/products";
 import Login from "./pages/Login";
 import Profile from "./components/Profile";
+import SignUp from "./pages/SignUp";
 import {
   createBrowserRouter,
   Outlet,
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
       },
     ],
   },

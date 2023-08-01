@@ -27,11 +27,11 @@ section {
   text-align: center;
 }
 
-@keyframes animateBg {
+/* @keyframes animateBg {
   100% {
     filter: hue-rotate(360deg);
   }
-}
+} */
 
 .container {
   padding: 30px;

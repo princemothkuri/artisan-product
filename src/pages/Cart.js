@@ -2,18 +2,25 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import background from "./bgImage.JPG";
 import CartItem from "../components/CartItem";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const productData = useSelector((state) => state.artisan.productData);
   const [total, setTotal] = useState(0);
+  const userInfo = useSelector((state) => state.artisan.userInfo);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    let price = 0;
-    productData.map((item) => {
-      price += item.price;
-    });
-    setTotal(price.toFixed(2));
-  }, [productData]);
+    if (userInfo) {
+      let price = 0;
+      productData.map((item) => {
+        price += item.price;
+      });
+      setTotal(price.toFixed(2));
+    } else {
+      navigate("/login");
+    }
+  }, [productData, userInfo]);
   return (
     <div>
       <div>

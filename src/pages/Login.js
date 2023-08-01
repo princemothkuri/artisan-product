@@ -108,8 +108,7 @@ const Login = () => {
               </div>
             </div>
             <div className="no-account">
-              Don't have an account?
-              <a href="sellers sign up page.html">Sign up</a>
+              Don't have an account? <a href="/signup">Sign up</a>
             </div>
           </form>
         </div>
