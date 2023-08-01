@@ -17,9 +17,10 @@ const Cart = () => {
         price += item.price;
       });
       setTotal(price.toFixed(2));
-    } else {
-      navigate("/login");
     }
+    // else {
+    //   navigate("/login");
+    // }
   }, [productData, userInfo]);
   return (
     <div>

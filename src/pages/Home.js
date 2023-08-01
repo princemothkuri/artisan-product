@@ -20,9 +20,10 @@ function Home() {
   useEffect(() => {
     if (userInfo) {
       setProducts(data.data);
-    } else {
-      navigate("/login");
     }
+    // else {
+    //   navigate("/login");
+    // }
   }, [userInfo]);
 
   return (
